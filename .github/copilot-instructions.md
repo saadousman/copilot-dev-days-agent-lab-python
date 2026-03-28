@@ -2,21 +2,25 @@
 
 ## Mandatory Development Checklist
 
-- [ ] `uv run ruff check .`
-- [ ] `uv run pytest`
-- [ ] `uv run uvicorn app.main:app --reload --port 8000`
 
-Soc Ops is a social bingo app built with Python, FastAPI, Jinja2, and HTMX.
+=======
+- [ ] uv run ruff check .
+- [ ] uv run pytest
+- [ ] uv run uvicorn app.main:app --reload --port 8000
 
-Key files:
-- `app/main.py` — routes + HTMX endpoints
-- `app/game_logic.py` — board generation
-- `app/game_service.py` — session state
-- `app/templates/` — views
-- `tests/` — coverage
+## Overview
 
-Do not use VS Code Simple Browser. If `uv` is unavailable, use:
+Soc Ops is a FastAPI + Jinja2 + HTMX social bingo app. It uses server-side state, signed cookies, and HTMX partial updates.
 
-```bash
-python -m uvicorn app.main:app --reload --port 8000
-```
+## Key files
+
+- app/main.py — routes and HTMX endpoints
+- app/game_logic.py — bingo generation
+- app/game_service.py — session state
+- app/templates/ — Jinja2 views
+- tests/ — API and game logic coverage
+
+## Note
+
+If uv is unavailable, use python -m uvicorn app.main:app --reload --port 8000.
+
