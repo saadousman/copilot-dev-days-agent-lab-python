@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from app.data import FREE_SPACE, QUESTIONS
 from app.game_logic import (
     CENTER_INDEX,
